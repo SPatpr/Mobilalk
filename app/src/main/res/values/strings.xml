@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">League tables</string>
+    <string name="username">Felhasználónév</string>
+    <string name="password">Jelszó</string>
+    <string name="login">Bejelentkezés</string>
+    <string name="registration">Regisztráció</string>
+    <string name="email">Email</string>
+    <string name="passcheck">Jelszó megerősítése</string>
+    <string name="regpass">Jelszó (min. 6 karakter)</string>
+</resources>

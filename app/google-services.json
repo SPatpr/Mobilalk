@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "447826097460",
+    "project_id": "football-tables-49e49",
+    "storage_bucket": "football-tables-49e49.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447826097460:android:a097a91211d705e1b32161",
+        "android_client_info": {
+          "package_name": "com.example.leaguetables"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp4KJLmxgnNmSSBhn3lWosGUIBzChXBrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
