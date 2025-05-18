@@ -7,4 +7,18 @@
     <string name="email">Email</string>
     <string name="passcheck">Jelszó megerősítése</string>
     <string name="regpass">Jelszó (min. 6 karakter)</string>
+    <string name="save_data">Mentés</string>
+    <string name="delete_profil">Profil törlése</string>
+    <string name="greetings">Üdvözöljük!</string>
+    <string name="pl_standings_list">Premier League állása</string>
+    <string name="la_standings_list">Laliga állása</string>
+    <string name="l1_standings_list">Ligue 1 állása</string>
+    <string name="bundes_standings_list">Bundesliga állása</string>
+    <string name="sa_standings_list">Seria A állása</string>
+    <string name="place">Helyezés</string>
+    <string name="team">Csapat</string>
+    <string name="points">Pontok</string>
+    <string name="rg">RG</string>
+    <string name="kg">KG</string>
+    <string name="gk">GK</string>
 </resources>

@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = LoginActivity.class.getName();
+    private static final String PREF_KEY = LoginActivity.class.getPackage().toString();
     private SharedPreferences preferences;
     private FirebaseAuth auth;
 
@@ -35,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
 
         userNameText = findViewById(R.id.editTextEmail);
         passwordText = findViewById(R.id.editTextPassword);
+
+        preferences = getSharedPreferences(PREF_KEY, MODE_PRIVATE);
 
         auth = FirebaseAuth.getInstance();
 
@@ -59,6 +62,9 @@ public class LoginActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     Log.d(LOG_TAG, "Sikeres belépés");
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("username", userNameStr);
+                    editor.apply();
                     startmain();
                 }else{
                     Log.d(LOG_TAG, "Sikertelen belépés");

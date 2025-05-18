@@ -4,95 +4,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:background="@drawable/background"
     android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#B2DFDB"
     tools:context=".LoginActivity">
 
+
     <TextView
-        android:layout_width="275dp"
-        android:layout_height="103dp"
-        android:rotationX="0"
-        android:text="Bejelentkezés"
-        android:textColor="#FFFFFF"
-        android:textColorLink="#FFFFFF"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.502" />
-
-    <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="30dp"
-        android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#B1AFAF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.397" />
-
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#B1AFAF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextEmail"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/blue"
-        android:onClick="login"
         android:text="@string/login"
-        android:textColorLink="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#00796B"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
-        app:layout_constraintVertical_bias="0.076" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="#00796B"
+        app:boxStrokeColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="#FFFFFF"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        app:passwordToggleEnabled="true"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="#00796B"
+        app:boxStrokeColor="#FFFFFF"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tilEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginButton"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#00796B"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tilPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="login" />
+
 
     <TextView
         android:id="@+id/regTextView"
-        android:layout_width="228dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="37dp"
+        android:layout_width="192dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
         android:onClick="reg"
-        android:text="Regisztráció"
-        android:textColor="#FFFFFF"
-        android:textSize="36sp"
+        android:text="@string/registration"
+        android:textColor="#00796B"
+        android:textSize="28dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        app:layout_constraintVertical_bias="0.449" />
-
+        app:layout_constraintTop_toBottomOf="@id/loginButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

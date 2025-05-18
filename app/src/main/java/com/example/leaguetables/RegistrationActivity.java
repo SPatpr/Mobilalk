@@ -3,6 +3,7 @@ package com.example.leaguetables;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -78,6 +79,8 @@ public class RegistrationActivity extends AppCompatActivity {
                                 .build();
                         user.updateProfile(profileUpdates);
                     }
+                    SharedPreferences prefs = getSharedPreferences("user_session", MODE_PRIVATE);
+                    prefs.edit().putBoolean("isLoggedIn", true).apply();
                     startmain();
                 }else{
                     Log.d(LOG_TAG, "Sikertelen regisztráció");

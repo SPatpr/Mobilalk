@@ -5,4 +5,7 @@
     <color name="blue">#3675F4</color>
     <color name="blue_hover">#5A8DF9</color>
     <color name="blue_pressed">#245ACF</color>
+    <color name="teal_700">#00796B</color>
+    <color name="teal_200">#80CBC4</color>
+    <color name="hinz">#B2DFDB</color>
 </resources>
